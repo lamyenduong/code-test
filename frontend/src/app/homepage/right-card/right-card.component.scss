@@ -1,0 +1,162 @@
+@import "../../../styles.scss";
+
+.card__right-container {
+  position: relative;
+  background-color: $white;
+  border-radius: 28px;
+  padding: 12px 28px;
+  box-shadow: 0 0 20px rgba(206, 206, 206, 0.8);
+  width: 320px;
+  height: 568px;
+  overflow: hidden;
+  margin: 20px;
+  .card__background {
+    position: absolute;
+    width: 225px;
+    height: 225px;
+    background-color: $yellow;
+    top: -90px;
+    right: 215px;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .card__element {
+    position: relative;
+    z-index: 1;
+    .card__logo img {
+      height: 20px;
+      margin-block: 8px;
+    }
+    .card__element-container {
+      .card__header-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        .card__header {
+          font-size: 18px;
+          font-weight: 800;
+          color: $black;
+          margin-bottom: 16px;
+          text-transform: capitalize;
+        }
+        .product__total {
+          font-size: 16px;
+          font-weight: 800;
+          color: $black;
+          margin-bottom: 16px;
+          text-transform: capitalize;
+        }
+      }
+      .product__container {
+        position: relative;
+        max-height: 500px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .product__card {
+          position: relative;
+          display: flex;
+          margin-bottom: 40px;
+          overflow: hidden;
+          .card__left {
+            position: relative;
+            margin-right: 12px;
+            width: 90px;
+            height: 90px;
+            .img__container {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-55%, -72%) rotate(-25deg);
+                max-width: 125%;
+                max-height: 125%;
+              }
+            }
+          }
+          .card__right {
+            position: relative;
+            width: 100%;
+            .product__name {
+              font-size: 12px;
+              color: $black;
+              font-weight: 700;
+              padding-bottom: 10px;
+            }
+            .product__price {
+              font-size: 14px;
+              color: $black;
+              font-weight: 700;
+              padding-bottom: 10px;
+            }
+            .product__flexbar {
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .quantity {
+                position: relative;
+                display: flex;
+                button {
+                  position: relative;
+                  display: block;
+                  height: 28px;
+                  width: 28px;
+                  border-radius: 50%;
+                  border: none;
+                  background-color: $light-gray;
+                  &:hover {
+                    background-color: #dddddd;
+                  }
+                  img {
+                    position: absolute;
+                    height: 8px;
+                    width: 8px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                }
+
+                input {
+                  position: relative;
+                  display: block;
+                  width: 36px;
+                  background-color: transparent;
+                  text-align: right;
+                  border: none;
+                  color: $black;
+                }
+              }
+              .product__remove {
+                button {
+                  position: relative;
+                  height: 28px;
+                  width: 28px;
+                  border-radius: 50%;
+                  border: none;
+                  background-color: $yellow;
+                  &:hover {
+                    box-shadow: -1px 1px 4px rgba(206, 206, 206, 0.8);
+                  }
+                  img {
+                    position: absolute;
+                    height: 16px;
+                    width: 16px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
